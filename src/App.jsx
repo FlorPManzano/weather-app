@@ -45,10 +45,10 @@ function App() {
       })
       .then((weatherData) => {
         setWeather(weatherData);
-        console.log(weatherData);
+        // console.log(weatherData);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         setLoading(false);
         setShow(false);
         setShowInput(true);
@@ -63,12 +63,12 @@ function App() {
       })
       .then((forecastData) => {
         setForecast(forecastData);
-        console.log(forecastData);
+        // console.log(forecastData);
         setLoading(false);
         setShow(true);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         setLoading(false);
         setShow(false);
       });
@@ -76,7 +76,6 @@ function App() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("target", e.target[0].value);
     if (e.target[0].value === "") {
       setCity(null);
       setShowInput(true);
